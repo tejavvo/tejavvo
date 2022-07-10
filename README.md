@@ -1,9 +1,9 @@
 Hi, I’m @Pixely11
-- I can do a various forms of programming ranging from Web, App, Game Devlopment
+- I can do a various forms of programming ranging from Web, App, Game Devlopment or even fidlle with microchips (just fiddle mainly :P) 
 - I can program in:
    - C
    - Python
-   - Microython
+   - Micropython
    - SQL, Bash
    - GdScript
    - HTML, CSS, JS, Bootstrap
