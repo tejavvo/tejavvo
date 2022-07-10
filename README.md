@@ -1,8 +1,10 @@
 Hi, I’m @Pixely11
 - I can do a various forms of programming ranging from Web, App, Game Devlopment
 - I can program in:
-   - Python
    - C
+   - Python
+   - Microython
+   - SQL, Bash
    - GdScript
    - HTML, CSS, JS, Bootstrap
 - I’m looking to collaborate on various yet intersting projects
