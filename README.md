@@ -1,4 +1,4 @@
-Hi, I’m @Pixely11
+Hi, I’m Sai Teja @tejavvo
 - I can do a various forms of programming ranging from Web, App, Game Devlopment or even fidlle with microchips (just fiddle mainly :P) 
 - I can program in:
    - C
