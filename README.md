@@ -7,7 +7,7 @@ Hi, I’m Sai Teja @tejavvo
    - SQL, Bash
    - GdScript
    - HTML, CSS, JS, Bootstrap
-- I’m looking to collaborate on various yet intersting projects
+   - i use arch btw ;)
 - Contact me:
   - My Email: saiteja11.pudi@gmail.com
   - Twitter: @pixely111
