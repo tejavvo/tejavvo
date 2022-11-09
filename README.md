@@ -1,13 +1,5 @@
 Hi, I’m Sai Teja @tejavvo
-- I can do a various forms of programming ranging from Web, App, Game Devlopment or even fidlle with microchips (just fiddle mainly :P) 
-- I can program in:
-   - C
-   - Python
-   - Micropython
-   - SQL, Bash
-   - GdScript
-   - HTML, CSS, JS, Bootstrap
-   - i use arch btw ;)
+- fidlefidlefidlefidlefidlefidlefidlefidlefidlefidlefidle
 - Contact me:
   - My Email: saiteja11.pudi@gmail.com
   - Twitter: @pixely111
