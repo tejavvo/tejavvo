@@ -1,10 +1,10 @@
-Hi, I’m Sai Teja @tejavvo
+Hi, I’m Sai Teja [@tejavvo](https://github.com/tejavvo)
 - fidlefidlefidlefidlefidlefidlefidlefidlefidlefidlefidle
 - Contact me:
   - My Email: saiteja11.pudi@gmail.com
-  - Reddit: u/tejavvo
-  - Twitter: @tejavvo
-  - Insta: @tejavvo
+  - Reddit: [u/tejavvo](https://www.reddit.com/user/tejavvo)
+  - Twitter: [@tejavvo](https://twitter.com/tejavvo)
+  - Insta: [@tejavvo](https://www.instagram.com/tejavvo/)
 
 <!---
 Pixely11/Pixely11 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
