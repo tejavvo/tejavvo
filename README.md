@@ -2,7 +2,9 @@ Hi, I’m Sai Teja @tejavvo
 - fidlefidlefidlefidlefidlefidlefidlefidlefidlefidlefidle
 - Contact me:
   - My Email: saiteja11.pudi@gmail.com
-  - Twitter: @pixely111
+  - Reddit: u/tejavvo
+  - Twitter: @tejavvo
+  - Insta: @tejavvo
 
 <!---
 Pixely11/Pixely11 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
