@@ -1,6 +1,7 @@
-Hi, I’m Teja Pudi [@tejavvo](https://github.com/tejavvo)
+# Hi, I’m Teja Pudi [@tejavvo](https://github.com/tejavvo)
 - Contact me:
   - My Email: saiteja11.pudi@gmail.com
+  - About me: https://researchweb.iiit.ac.in/~teja.pudi/
 
 <!---
 tejavvo/tejavvo is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
