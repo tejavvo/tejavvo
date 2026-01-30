@@ -1,0 +1,22 @@
+/* System Status Bar */
+#system-status {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--term-green);
+    text-shadow: 0 0 5px var(--term-green);
+    display: flex;
+    gap: 20px;
+    pointer-events: none;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+.status-item {
+    opacity: 0.8;
+}

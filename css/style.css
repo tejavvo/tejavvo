@@ -1,0 +1,343 @@
+@import 'clock.css';
+
+:root {
+    --bg: #0a0a12;
+    --term-green: #ffae00;
+    --term-blue: #00e1ff;
+    --term-pink: #ff00c8;
+    --glow: 0 0 10px var(--term-green), 0 0 20px var(--term-green);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #050510;
+    font-family: 'Fira Code', monospace;
+    color: var(--term-green);
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Sunset Haze Gradient: Deep blue -> Retro Purple -> Burnt Orange */
+    background: linear-gradient(180deg, #050510 0%, #1e1024 60%, #3d1424 100%);
+    position: relative;
+    cursor: default;
+}
+
+/* GRAIN EFFECT */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 20;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* SCANLINES */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 21;
+}
+
+/* VIGNETTE & CRT WARMTH */
+.crt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 22;
+    /* Vignette + slight warm sepia tint */
+    background: radial-gradient(circle, rgba(255, 200, 150, 0.02) 0%, rgba(10, 5, 10, 0.4) 80%, rgba(0, 0, 0, 0.9) 100%);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    height: 90vh;
+    perspective: 1000px;
+    /* For 3D rotations if needed */
+}
+
+/* Main Terminal Window */
+.main-terminal {
+    border: 2px solid var(--term-green);
+    padding: 30px;
+    box-shadow: var(--glow);
+    background: rgba(20, 5, 0, 0.75);
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+    z-index: 999;
+    /* Highest Priority */
+    /* Slight glass blur */
+    backdrop-filter: blur(2px);
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+    text-shadow: 4px 4px var(--term-pink);
+    animation: flicker 1.5s infinite alternate;
+}
+
+.prompt::before {
+    content: "> ";
+    color: var(--term-pink);
+}
+
+.cursor {
+    animation: blink 1s step-end infinite;
+}
+
+/* Floating Modules ("Stickers") */
+.module {
+    position: absolute;
+    padding: 20px;
+    border: 2px dashed var(--term-blue);
+    background: rgba(10, 10, 25, 0.85);
+    color: var(--term-blue);
+    width: 280px;
+    box-shadow: 5px 5px 0px var(--term-pink);
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(2px);
+    cursor: grab;
+}
+
+.module:active {
+    cursor: grabbing;
+}
+
+.module:hover {
+    transform: translate(-2px, -2px);
+    /* Default hover effect */
+    box-shadow: 7px 7px 0px var(--term-pink);
+    z-index: 10;
+    /* Bring to front on hover */
+}
+
+/* Used for dragged state to disable transition for smooth drag */
+.module.dragging {
+    transition: none;
+    z-index: 100;
+}
+
+
+.module h2 {
+    font-size: 1rem;
+    margin-top: 0;
+    border-bottom: 1px solid var(--term-blue);
+    padding-bottom: 5px;
+    font-weight: 700;
+    pointer-events: none;
+    /* Make header pass clicks through if needed */
+}
+
+/* Initial positions */
+#mod-gommies {
+    top: 5%;
+    right: 2%;
+    transform: rotate(3deg);
+}
+
+#mod-systems {
+    top: 10%;
+    left: 2%;
+    transform: rotate(-2deg);
+    border-color: var(--term-pink);
+    color: var(--term-pink);
+}
+
+#mod-links {
+    bottom: 5%;
+    right: 2%;
+    transform: rotate(1deg);
+    border-style: dotted;
+    z-index: 998;
+}
+
+.tag-highlight {
+    background: var(--term-pink);
+    color: var(--bg);
+    padding: 2px 5px;
+    font-weight: bold;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+}
+
+a:hover {
+    background: var(--term-green);
+    color: var(--bg);
+}
+
+/* Animations */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    98% {
+        opacity: 0.8;
+    }
+
+    99% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(3deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(3deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .module {
+        position: relative;
+        width: 100%;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin-bottom: 20px;
+        transform: none !important;
+    }
+
+    #container {
+        height: auto;
+    }
+
+    .main-terminal {
+        margin: 20px auto;
+    }
+}
+
+/* Vibe Module */
+#mod-vibe {
+    bottom: 10%;
+    left: 35%;
+    transform: rotate(-1deg);
+    border-color: var(--term-green);
+    color: var(--term-green);
+    width: 320px;
+}
+
+.visualizer-container {
+    display: flex;
+    align-items: flex-end;
+    height: 60px;
+    gap: 4px;
+    margin: 10px 0;
+    border-bottom: 1px solid var(--term-green);
+    padding-bottom: 2px;
+}
+
+.vis-bar {
+    flex: 1;
+    background: var(--term-green);
+    opacity: 0.8;
+    transition: height 0.1s ease;
+}
+
+
+/* Fellowship Module */
+#mod-mordor {
+    top: 40%;
+    right: 5%;
+    transform: rotate(2deg);
+    border-color: #ff3333;
+    /* Mount Doom Red */
+    color: #ffaaaa;
+    width: 500px;
+    /* Widened to fit code */
+    z-index: 4;
+}
+
+#mod-mordor:hover {
+    box-shadow: 7px 7px 0px #ff3333;
+}
+
+#mod-mordor h2 {
+    border-color: #ff3333;
+}
+
+.code-block {
+    background: #000;
+    padding: 10px 0;
+    /* Zero horizontal padding */
+    border: 1px solid #333;
+    font-size: 0.8rem;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    white-space: pre;
+    text-align: left;
+}
+
+.syntax-com {
+    color: #666;
+    font-style: italic;
+}
+
+.syntax-kwd {
+    color: var(--term-pink);
+    font-weight: bold;
+}
+
+.syntax-type {
+    color: var(--term-blue);
+}
+
+.syntax-fn {
+    color: var(--term-green);
+}
+
+.syntax-str {
+    color: #ffff00;
+}
+
+.syntax-num {
+    color: #ff3333;
+}
+
+.syntax-def {
+    color: #ccaa00;
+}
