@@ -1,6 +1,6 @@
-# Hi, I’m Teja Pudi [@tejavvo](https://github.com/tejavvo)
-- Contact me:
-  - My Email: saiteja11.pudi@gmail.com
+# Hi, I’m Teja Pudi :)
+- Contact me: [@tejavvo](https://github.com/tejavvo)
+  - My Email: teja.pudi@research.iiit.ac.in
   - About me: https://researchweb.iiit.ac.in/~teja.pudi/
 
 <!---
