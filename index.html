@@ -13,6 +13,9 @@
 <body>
 
     <div class="crt-overlay"></div>
+    <div class="screen-flicker"></div>
+    <div class="stars" id="starfield"></div>
+
     <div id="system-status">
         <span id="clock">00:00:00</span>
         <span class="status-item">MEM: 64K OK</span>
@@ -20,6 +23,7 @@
 
     <div id="container">
         <div class="main-terminal">
+            <div class="sigil"> ┼╪┼  ⧖  ╪╫╪  ⧖  ┼╪┼ </div>
             <p id="last-login">Last login: Fri Jan 30 17:12:54 on ttys000</p>
             <p class="prompt">whoami</p>
             <h1 class="type-text">TEJA PUDI</h1>
@@ -28,6 +32,7 @@
             <p class="prompt">status</p>
             <p id="dynamic-status"><span class="type-text">Building stuff. Breakingstuff. Learning.</span></p><span
                 class="cursor">_</span>
+            <div class="sigil" style="margin-top: 20px;"> ⟡ ⟡ ⟡ </div>
         </div>
 
         <div class="module" id="mod-gommies">
@@ -96,6 +101,30 @@ without 0777 permissions. */</span>
     </div>
 
     <script src="js/script.js"></script>
+    <script>
+        const starfield = document.getElementById('starfield');
+        if (starfield) {
+            const numStars = 60;
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 2.5 + 0.5;
+                const duration = Math.random() * 3 + 1;
+
+                star.style.left = `${x}vw`;
+                star.style.top = `${y}vh`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.setProperty('--duration', `${duration}s`);
+
+                starfield.appendChild(star);
+            }
+        }
+    </script>
 </body>
 
 </html>
