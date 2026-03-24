@@ -16,6 +16,126 @@
     <div class="screen-flicker"></div>
     <div class="stars" id="starfield"></div>
 
+    <!-- Ethereal Star & Orbital Rings SVG -->
+    <div style="position: fixed; top: 15%; left: 8%; z-index: 1; pointer-events: none; opacity: 0.25; filter: drop-shadow(0 0 10px var(--term-blue)); animation: float 6s infinite ease-in-out;">
+        <svg width="250" height="250" viewBox="0 0 100 100">
+            <!-- 8-point star -->
+            <path d="M50 0 L54 38 L95 45 L54 52 L50 90 L46 52 L5 45 L46 38 Z" fill="none" stroke="var(--term-pink)" stroke-width="0.6"/>
+            <path d="M50 20 L52 42 L75 45 L52 48 L50 70 L48 48 L25 45 L48 42 Z" fill="none" stroke="var(--term-blue)" stroke-width="0.4"/>
+            <!-- Orbital Rings -->
+            <ellipse cx="50" cy="45" rx="35" ry="8" transform="rotate(30 50 45)" fill="none" stroke="var(--term-green)" stroke-width="0.3" stroke-dasharray="2 2"/>
+            <ellipse cx="50" cy="45" rx="35" ry="8" transform="rotate(-30 50 45)" fill="none" stroke="var(--term-green)" stroke-width="0.3" stroke-dasharray="2 2"/>
+            <ellipse cx="50" cy="45" rx="40" ry="12" transform="rotate(0 50 45)" fill="none" stroke="var(--term-blue)" stroke-width="0.2" stroke-dasharray="1 3"/>
+            <!-- Sparkles -->
+            <circle cx="20" cy="20" r="0.8" fill="var(--term-pink)"/>
+            <circle cx="80" cy="70" r="0.6" fill="var(--term-blue)"/>
+            <circle cx="85" cy="25" r="0.5" fill="var(--term-green)"/>
+            <circle cx="15" cy="65" r="0.7" fill="var(--term-green)"/>
+        </svg>
+    </div>
+
+    <!-- Shattered Sword Ethereal SVG -->
+    <div style="position: fixed; bottom: 2%; right: 5%; z-index: 1; pointer-events: none; opacity: 0.3; filter: drop-shadow(0 0 15px var(--term-pink)); transform: rotate(-20deg);">
+        <svg width="350" height="450" viewBox="0 0 100 150">
+            <!-- Handle & Crossguard -->
+            <path d="M50 5 L48 20 L30 25 L30 28 L45 30 L45 40 L55 40 L55 30 L70 28 L70 25 L52 20 Z" fill="none" stroke="var(--term-blue)" stroke-width="0.5"/>
+            <!-- Blade Top -->
+            <path d="M45 40 L55 40 L53 75 L47 75 Z" fill="none" stroke="var(--term-blue)" stroke-width="0.5"/>
+            <path d="M50 40 L50 75" fill="none" stroke="var(--term-blue)" stroke-width="0.2"/>
+            <!-- Blade Fragments -->
+            <polygon points="46,80 54,77 52,90 48,85" fill="none" stroke="var(--term-pink)" stroke-width="0.5"/>
+            <polygon points="42,95 49,92 45,110" fill="none" stroke="var(--term-pink)" stroke-width="0.5"/>
+            <polygon points="56,90 62,87 58,100 53,97" fill="none" stroke="var(--term-pink)" stroke-width="0.5"/>
+            <polygon points="38,115 48,105 44,135" fill="none" stroke="var(--term-pink)" stroke-width="0.5"/>
+            <line x1="48" y1="105" x2="44" y2="135" stroke="var(--term-pink)" stroke-width="0.2"/>
+            <!-- Starburst at break -->
+            <path d="M50 85 L55 70 L65 78 L58 88 L75 95 L55 93 L50 115 L45 93 L25 95 L42 88 L35 78 L45 70 Z" fill="none" stroke="var(--term-green)" stroke-width="0.2"/>
+            <!-- Orbitals and small stars around break -->
+            <circle cx="50" cy="88" r="15" fill="none" stroke="var(--term-blue)" stroke-width="0.2" stroke-dasharray="1 2"/>
+            <path d="M20 70 L22 78 L30 80 L22 82 L20 90 L18 82 L10 80 L18 78 Z" fill="none" stroke="var(--term-pink)" stroke-width="0.3"/>
+            <path d="M80 110 L81 115 L86 116 L81 117 L80 122 L79 117 L74 116 L79 115 Z" fill="none" stroke="var(--term-pink)" stroke-width="0.3"/>
+            <path d="M85 50 L86 53 L89 54 L86 55 L85 58 L84 55 L81 54 L84 53 Z" fill="none" stroke="var(--term-blue)" stroke-width="0.3"/>
+            <path d="M15 115 L16 118 L19 119 L16 120 L15 123 L14 120 L11 119 L14 118 Z" fill="none" stroke="var(--term-blue)" stroke-width="0.3"/>
+            <!-- Arrow streaking -->
+            <path d="M70 95 L95 95 M90 92 L95 95 L90 98" fill="none" stroke="var(--term-green)" stroke-width="0.4"/>
+            <circle cx="95" cy="95" r="4" fill="none" stroke="var(--term-green)" stroke-width="0.2" stroke-dasharray="1 1"/>
+        </svg>
+    </div>
+
+    <!-- Background Heavy ASCII Cybersigillism Art -->
+    <div style="position: fixed; bottom: 15%; left: -8%; z-index: 0; pointer-events: none; opacity: 0.12; font-size: 8px; line-height: 8px; white-space: pre; color: var(--term-blue); transform: rotate(90deg); text-shadow: 0 0 5px var(--term-blue);">
+    _   _ _   _ __  __    _    _   _ 
+   | | | | | | |  \/  |  / \  | \ | |
+   | |_| | | | | |\/| | / _ \ |  \| |
+   |  _  | |_| | |  | |/ ___ \| |\  |
+   |_| |_|\___/|_|  |_/_/   \_\_| \_|
+    _______     _____  _    _   _ _____ ___ ___  _   _ 
+   | ____\ \   / / _ \| |  | | | |_   _|_ _/ _ \| \ | |
+   |  _|  \ \ / / | | | |  | | | | | |  | | | | |  \| |
+   | |___  \ V /| |_| | |__| |_| | | |  | | |_| | |\  |
+   |_____|  \_/  \___/|_____\___/  |_| |___\___/|_| \_|
+    </div>
+
+    <!-- Ethereal Arch/Sigil ASCII -->
+    <div style="position: fixed; top: 35%; right: 2%; z-index: 0; pointer-events: none; opacity: 0.15; font-size: 11px; line-height: 11px; white-space: pre; color: var(--term-pink); text-shadow: 0 0 8px var(--term-pink);">
+      /\  _  /\
+     |  ||  |
+    /   ||   \
+   |    ||    |
+   \   _||_   /
+    | |    | |
+    | |    | |
+    | |    | |
+     \ \  / /
+      \ \/ /
+       \  /
+        \/
+        ⟡
+        ⟡
+    </div>
+
+    <!-- Small decorative digital noise / pixels top right -->
+    <div style="position: fixed; top: 5%; right: 15%; z-index: 0; pointer-events: none; opacity: 0.2; font-size: 10px; line-height: 10px; white-space: pre; color: var(--term-green); letter-spacing: 2px;">
+    █ ▄ ▀ ▄ █ ▄ ▀
+    ▄ █ ▀ █ ▄ ▀ █
+    ▀ ▄ █ ▄ █ ▀ ▄
+    </div>
+
+    <!-- More Background Saturation -->
+    <div style="position: fixed; top: 60%; left: 20%; z-index: 0; pointer-events: none; opacity: 0.15; filter: drop-shadow(0 0 10px var(--term-pink)); transform: scale(1.5) rotate(45deg);">
+        <svg width="200" height="200" viewBox="0 0 100 100">
+            <path d="M50 10 L52 48 L90 50 L52 52 L50 90 L48 52 L10 50 L48 48 Z" fill="none" stroke="var(--term-pink)" stroke-width="0.3"/>
+            <circle cx="50" cy="50" r="30" fill="none" stroke="var(--term-blue)" stroke-width="0.2" stroke-dasharray="4 4"/>
+            <circle cx="50" cy="50" r="20" fill="none" stroke="var(--term-green)" stroke-width="0.2"/>
+        </svg>
+    </div>
+    
+    <div style="position: fixed; top: 10%; left: 70%; z-index: 0; pointer-events: none; opacity: 0.2; color: var(--term-blue); white-space: pre; font-size: 12px; line-height: 12px; font-weight: bold; text-shadow: 0 0 8px var(--term-blue);">
+      + -- * -- +
+      |         |
+      *  ETHER  *
+      |         |
+      + -- * -- +
+    </div>
+
+    <div style="position: fixed; bottom: 35%; right: 10%; z-index: 0; pointer-events: none; opacity: 0.15; font-size: 14px; color: var(--term-pink); transform: rotate(-15deg); letter-spacing: 5px; text-shadow: 0 0 5px var(--term-pink);">
+    || SYS.DECAY ||
+    || SYS.DECAY ||
+    || SYS.DECAY ||
+    </div>
+
+    <div style="position: fixed; top: 40%; left: -2%; z-index: 0; pointer-events: none; opacity: 0.1; font-size: 18px; color: var(--term-green); transform: rotate(90deg); letter-spacing: 8px;">
+    +++++++++++++++++++
+    </div>
+
+    <div style="position: fixed; top: 80%; left: 80%; z-index: 0; pointer-events: none; opacity: 0.2; filter: drop-shadow(0 0 10px var(--term-blue));">
+        <svg width="150" height="150" viewBox="0 0 100 100">
+            <path d="M20 20 L80 80 M20 80 L80 20" fill="none" stroke="var(--term-blue)" stroke-width="0.2"/>
+            <circle cx="50" cy="50" r="10" fill="none" stroke="var(--term-pink)" stroke-width="0.4"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--term-green)" stroke-width="0.1" stroke-dasharray="1 3"/>
+        </svg>
+    </div>
+
     <div id="system-status">
         <span id="clock">00:00:00</span>
         <span class="status-item">MEM: 64K OK</span>
@@ -100,6 +220,25 @@ without 0777 permissions. */</span>
         </div>
     </div>
 
+    <!-- Foreground Ethereal Overlays -->
+    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; pointer-events: none; opacity: 0.08; filter: drop-shadow(0 0 20px var(--term-blue));">
+        <svg width="1000" height="1000" viewBox="0 0 100 100">
+            <path d="M50 -20 L50.5 49.5 L120 50 L50.5 50.5 L50 120 L49.5 50.5 L-20 50 L49.5 49.5 Z" fill="none" stroke="var(--term-blue)" stroke-width="0.1"/>
+            <path d="M50 0 L50 100 M0 50 L100 50" fill="none" stroke="var(--term-pink)" stroke-width="0.05" stroke-dasharray="1 2"/>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="var(--term-green)" stroke-width="0.05" stroke-dasharray="2 4"/>
+            <path d="M20 20 L80 80 M20 80 L80 20" fill="none" stroke="var(--term-blue)" stroke-width="0.05" stroke-dasharray="1 5"/>
+        </svg>
+    </div>
+
+    <div style="position: fixed; bottom: 3%; left: 3%; z-index: 9999; pointer-events: none; opacity: 0.4; color: var(--term-green); font-size: 10px; font-weight: bold; text-shadow: 0 0 5px var(--term-green); white-space: pre;">
+    [OVERLAY ACTIVE]
+    * ⟡ * ⟡ * ⟡ *
+    </div>
+    
+    <div style="position: fixed; top: 3%; right: 3%; z-index: 9999; pointer-events: none; opacity: 0.3; color: var(--term-pink); font-size: 12px; font-weight: bold; text-shadow: 0 0 5px var(--term-pink);">
+    ⧖ ╪ ⧖
+    </div>
+
     <script src="js/script.js"></script>
     <script>
         const starfield = document.getElementById('starfield');
@@ -123,6 +262,39 @@ without 0777 permissions. */</span>
 
                 starfield.appendChild(star);
             }
+        }
+
+        // Generate 3D foreground cross-star particles
+        const fgStars = 35;
+        const symbols = ['+', '⟡', '✧', 'x', '✥', '⧖'];
+        for (let i = 0; i < fgStars; i++) {
+            const fg = document.createElement('div');
+            fg.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            fg.style.position = 'fixed';
+            fg.style.zIndex = '9998';
+            fg.style.pointerEvents = 'none';
+            
+            // Randomly choose colors to match the Cybersigillism aesthetic
+            const colors = ['var(--term-pink)', 'var(--term-blue)', 'var(--term-green)'];
+            fg.style.color = colors[Math.floor(Math.random() * colors.length)];
+            fg.style.textShadow = `0 0 10px ${fg.style.color}`;
+            
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            const size = Math.random() * 18 + 8;
+            const duration = Math.random() * 5 + 3;
+            const blur = Math.random() * 3; // Parallax blur depth effect
+
+            fg.style.left = `${x}vw`;
+            fg.style.top = `${y}vh`;
+            fg.style.fontSize = `${size}px`;
+            fg.style.opacity = Math.random() * 0.5 + 0.1;
+            fg.style.filter = `blur(${blur}px)`;
+            fg.style.animation = `float ${duration}s infinite ease-in-out alternate`;
+            // Add some rotation
+            fg.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+            document.body.appendChild(fg);
         }
     </script>
 </body>
